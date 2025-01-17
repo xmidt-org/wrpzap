@@ -13,6 +13,8 @@
 package wrpzap
 
 import (
+	"context"
+
 	"github.com/xmidt-org/wrp-go/v3"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -28,7 +30,7 @@ type Observer struct {
 }
 
 // ObserveWRP logs information about the message being processed.
-func (ob Observer) ObserveWRP(msg wrp.Message) {
+func (ob Observer) ObserveWRP(_ context.Context, msg wrp.Message) {
 	if ob.Logger == nil {
 		return
 	}

@@ -160,7 +160,7 @@ func TestObserver_ObserveWRP(t *testing.T) {
 				ob.Logger = nil
 			}
 
-			ob.ObserveWRP(tt.input_message)
+			ob.ObserveWRP(nil, tt.input_message)
 
 			entries := recorded.All()
 			if tt.nilLogger {
