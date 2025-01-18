@@ -4,7 +4,7 @@ go 1.23.1
 
 require (
 	github.com/stretchr/testify v1.10.0
-	github.com/xmidt-org/wrp-go/v3 v3.6.0
+	github.com/xmidt-org/wrp-go/v3 v3.7.0
 	go.uber.org/zap v1.27.0
 )
 
