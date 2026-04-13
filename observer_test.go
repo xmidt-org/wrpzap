@@ -4,6 +4,7 @@
 package wrpzap
 
 import (
+	"context"
 	"reflect"
 	"strings"
 	"testing"
@@ -160,7 +161,7 @@ func TestObserver_ObserveWRP(t *testing.T) {
 				ob.Logger = nil
 			}
 
-			ob.ObserveWRP(nil, tt.input_message)
+			ob.ObserveWRP(context.Background(), tt.input_message)
 
 			entries := recorded.All()
 			if tt.nilLogger {
